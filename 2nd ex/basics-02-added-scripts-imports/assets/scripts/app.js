@@ -14,7 +14,7 @@ function minus() {
     rez = rez - num;
     outputResult(rez, calcDescr);
     const obekt = {
-        operaciq: "Minus",
+        operaciq: "-",
         predishenRez: predishenRez,
         izbranoChislo: num,
         rezultat: rez
@@ -62,7 +62,7 @@ function plus() {
     rez = rez + num;
     outputResult(rez, calcDescr);
     const obekt = {
-        operaciq: "Plus",
+        operaciq: "+",
         predishenRez: predishenRez,
         chislo: num,
         rezultat: rez
