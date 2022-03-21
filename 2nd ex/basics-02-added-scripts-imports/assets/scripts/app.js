@@ -40,12 +40,12 @@ function divide() {
 }
 
 function multiply() {
-    const num = inputNum();
-    const predishenRez = rez;
-    const calcDescr = "Multiplying: " + rez + " * " + userInput.value;
+    const num = inputnum();
+    const predishenrez = rez;
+    const calcdescr = "multiplying: " + rez + " * " + userinput.value;
     rez = rez * num;
-    outputResult(rez, calcDescr);
-    Obekt("*", predishenRez, num, rez);
+    outputresult(rez, calcdescr);
+    obekt("*", predishenrez, num, rez);
 
 }
 
