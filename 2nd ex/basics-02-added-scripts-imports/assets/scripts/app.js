@@ -7,7 +7,33 @@ function inputNum() {
     return parseInt(userInput.value);
 }
 
-function Obekt(operaciq, predishenRez, izbranoChislo, rezultat){
+function izberiOpciq(izbor){
+    const num = inputNum();
+    const predishenRez = rez;
+    let calcDescr;
+    if(izbor === "Subtract") {
+        rez = rez - num;
+        calcDescr = "Subtracting: " + rez + " - " + userInput.value;
+    }
+    else if (izbor === "Add")
+    {
+        rez = rez + num;
+        calcDescr = "Adding: " + rez + " + " + userInput.value;
+    }else if (izbor === "Divide")
+    {
+        rez = rez / num;
+        calcDescr = "Dividing: " + rez + " / " + userInput.value;
+    }else if (izbor === "Multiply")
+    {
+        rez = rez * num;
+        calcDescr = "Multiplying: " + rez + " * " + userInput.value;
+    }
+    outputResult(rez, calcDescr);
+    Obekt(izbor, predishenRez, num, rez);
+}
+
+
+function Obekt(operaciq, predishenRez, izbranoChislo, rezultat) {
 
     const obekt = {
         operaciq: operaciq,
@@ -22,43 +48,20 @@ function Obekt(operaciq, predishenRez, izbranoChislo, rezultat){
 
 
 function minus() {
-    const num = inputNum();
-    const predishenRez = rez;
-    const calcDescr = "Subtracting: " + rez + " - " + userInput.value;
-    rez = rez - num;
-    outputResult(rez, calcDescr);
-    Obekt("-", predishenRez, num, rez);
+    izberiOpciq("Subtract");
 }
 
 function divide() {
-    const num = inputNum();
-    const predishenRez = rez;
-    const calcDescr = "Dividing: " + rez + " / " + userInput.value;
-    rez = rez / num;
-    outputResult(rez, calcDescr);
-    Obekt("/", predishenRez, num, rez);
+   izberiOpciq("Divide");
 }
 
 function multiply() {
-    const num = inputnum();
-    const predishenrez = rez;
-    const calcdescr = "multiplying: " + rez + " * " + userinput.value;
-    rez = rez * num;
-    outputresult(rez, calcdescr);
-    obekt("*", predishenrez, num, rez);
-
+    izberiOpciq("Multiply");
 }
 
 function plus() {
-    const num = inputNum();
-    const predishenRez = rez;
-    const calcDescr = "Adding: " + rez + " + " + userInput.value;
-    rez = rez + num;
-    outputResult(rez, calcDescr);
-    Obekt("+", predishenRez, num, rez);
-
+    izberiOpciq("Add");
 }
-
 
 addBtn.addEventListener("click", plus);
 subtractBtn.addEventListener("click", minus);
