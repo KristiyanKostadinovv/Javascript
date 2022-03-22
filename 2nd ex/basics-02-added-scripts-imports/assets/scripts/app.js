@@ -7,7 +7,14 @@ function inputNum() {
     return parseInt(userInput.value);
 }
 
-function izberiOpciq(izbor){
+function izberiOpciq(izbor) {
+
+    if (izbor !== "Subtract" && izbor !== "Add" && izbor !== "Divide" && izbor !== "Multiply")
+    {
+        return;
+    }
+
+
     const num = inputNum();
     const predishenRez = rez;
     let calcDescr;
