@@ -9,8 +9,7 @@ function inputNum() {
 
 function izberiOpciq(izbor) {
 
-    if (izbor !== "Subtract" && izbor !== "Add" && izbor !== "Divide" && izbor !== "Multiply")
-    {
+    if (izbor !== "Subtract" && izbor !== "Add" && izbor !== "Divide" && izbor !== "Multiply") {
         return;
     }
 
@@ -18,20 +17,16 @@ function izberiOpciq(izbor) {
     const num = inputNum();
     const predishenRez = rez;
     let calcDescr;
-    if(izbor === "Subtract") {
+    if (izbor === "Subtract") {
         rez = rez - num;
         calcDescr = "Subtracting: " + rez + " - " + userInput.value;
-    }
-    else if (izbor === "Add")
-    {
+    } else if (izbor === "Add") {
         rez = rez + num;
         calcDescr = "Adding: " + rez + " + " + userInput.value;
-    }else if (izbor === "Divide")
-    {
+    } else if (izbor === "Divide") {
         rez = rez / num;
         calcDescr = "Dividing: " + rez + " / " + userInput.value;
-    }else if (izbor === "Multiply")
-    {
+    } else if (izbor === "Multiply") {
         rez = rez * num;
         calcDescr = "Multiplying: " + rez + " * " + userInput.value;
     }
@@ -59,7 +54,7 @@ function minus() {
 }
 
 function divide() {
-   izberiOpciq("Divide");
+    izberiOpciq("Divide");
 }
 
 function multiply() {
