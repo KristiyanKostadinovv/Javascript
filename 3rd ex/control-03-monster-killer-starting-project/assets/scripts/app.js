@@ -27,6 +27,7 @@ let playerHP = maxHP;
 adjustHealthBars(maxHP);
 
 function storeLog(event, value, playerHealth, monsterHealth) {
+
     let logMe = {
         event: event,
         value: value,
@@ -34,6 +35,33 @@ function storeLog(event, value, playerHealth, monsterHealth) {
         monsterHealth: monsterHealth
     }
 
+    switch (event) {
+        case LogPlayerAttack:
+            logMe.target = "Monster";
+            break;
+        case LogPlayerStrongAttack:
+            logMe.target = "Monster";
+            break;
+        case LogMonsterAttack:
+            logMe.target = "Player";
+            break;
+        case LogHealth:
+            logMe.target = "Player";
+            break;
+        case LogGameOver:
+            logMe = {
+                event: event,
+                value: value,
+                playerHealth: playerHealth,
+                monsterHealth: monsterHealth
+            }
+            break;
+        default:
+            logMe = {};
+    }
+
+
+    /*
     if (event === LogPlayerAttack) {
         logMe.target = "Monster";
     } else if (event === LogPlayerStrongAttack) {
@@ -49,7 +77,7 @@ function storeLog(event, value, playerHealth, monsterHealth) {
             playerHealth: playerHealth,
             monsterHealth: monsterHealth
         }
-    }
+    }*/
 
     log.push(logMe);
 }
@@ -142,4 +170,3 @@ attackBtn.addEventListener("click", attackHandler);
 strongAttackBtn.addEventListener("click", strongAttackHandler);
 healBtn.addEventListener("click", healPlayer);
 logBtn.addEventListener("click", printLog);
-
