@@ -93,6 +93,9 @@ function endRound() {
 }
 
 function easierAttackFunc(mode) {
+    //const attack = mode === attackOption ? Attack_Value : StrongAttackValue;
+    //const typeOfAttack = mode === attackOption ? LogPlayerAttack : LogPlayerStrongAttack;
+
     let attack;
     let typeOfAttack;
     if (mode == attackOption) {
