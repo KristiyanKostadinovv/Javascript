@@ -12,7 +12,7 @@ const zaguba = "COMPUTER WINS";
 let gameIsRunning = false;
 
 
-const Playerch = function () {
+const Playerch = function Playerch () {
     const choice = prompt(`Choose ${rock}, ${paper} or ${scissors}`, "").toUpperCase();
     if (choice != rock && choice != paper && choice != scissors) {
         alert("Invalid choice. Default value is chosen.");
@@ -44,15 +44,17 @@ const winner = function (PlayerChoice, ComputerChoice) {
 }
 
 startGameBtn.addEventListener("click", function () {
-    console.log("Game is running");
+
     if (gameIsRunning) {
         return;
     }
+    console.log("Game is running");
     gameIsRunning = true;
     const PlayerSelection = Playerch();
     console.log("Player Selected: ", PlayerSelection);
     const ComputerSelection = Computerch();
     console.log("Computer Selected: ", ComputerSelection);
     const whoWon = winner(PlayerSelection,ComputerSelection);
-    console.log(whoWon);
+    console.log("Winner is: ", whoWon);
+    gameIsRunning = false;
 });
