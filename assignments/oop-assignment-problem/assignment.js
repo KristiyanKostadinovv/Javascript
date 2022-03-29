@@ -53,6 +53,7 @@ console.log(instantiateCourse3);
 const instantiateCourse4 = new TheoreticalCourse("Movie4", 400, 20);
 
 
+
 instantiateCourse.print();
 instantiateCourse2.print();
 instantiateCourse3.print();
