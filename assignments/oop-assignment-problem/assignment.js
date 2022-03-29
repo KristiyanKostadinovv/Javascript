@@ -10,14 +10,13 @@ class Course {
         } else {
             this.#price = val;
         }
-
     }
 
 
     constructor(title, length, price) {
         this.title = title;
         this.length = length;
-        this.#price = price;
+        this.price = price;
     }
 
     calculate() {
@@ -26,6 +25,7 @@ class Course {
 
     print() {
         console.log(`Title: ${this.title}, Length: ${this.length}, Price: ${this.price}`);
+        console.log("Length/Price: " + this.calculate());
     }
 
 }
@@ -52,8 +52,6 @@ const instantiateCourse3 = new PracticalCourse("Movie3", 300, 10, 30);
 console.log(instantiateCourse3);
 const instantiateCourse4 = new TheoreticalCourse("Movie4", 400, 20);
 
-console.log(instantiateCourse.calculate());
-console.log(instantiateCourse2.calculate());
 
 instantiateCourse.print();
 instantiateCourse2.print();
