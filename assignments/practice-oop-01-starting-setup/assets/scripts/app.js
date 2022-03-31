@@ -21,7 +21,6 @@ class Component {
         this.hostEl.insertAdjacentElement(this.insertBefore ? "afterend" : "beforeend", this.element);
         //document.body.append(this.element);
     }
-
 }
 
 
