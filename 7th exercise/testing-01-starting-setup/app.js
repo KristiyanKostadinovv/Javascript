@@ -1,5 +1,5 @@
-const { generateText, createElement, validateInput } = require('util.js');
-
+const { generateText, createElement, validateInput } = require('./util');
+//const {test} = require("./fake");
 const initApp = () => {
   // Initializes the app, registers the button click listener
   const newUserButton = document.querySelector('#btnAddUser');
@@ -11,7 +11,7 @@ const addUser = () => {
   // and appends the element to the DOM
   const newUserNameInput = document.querySelector('input#name');
   const newUserAgeInput = document.querySelector('input#age');
-
+  //test();
   if (
     !validateInput(newUserNameInput.value, true, false) ||
     !validateInput(newUserAgeInput.value, false, true)
@@ -29,5 +29,4 @@ const addUser = () => {
 };
 
 // Start the app!
-
 initApp();
