@@ -30,4 +30,5 @@
   console.log(person);
   console.log(health);
   mergeObj();
+
 })();
