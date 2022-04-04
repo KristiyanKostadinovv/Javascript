@@ -1,6 +1,7 @@
 'use strict';
 
 (function() {
+/*
   const person ={
     fName: "Kris",
     lName: "Kostadnov",
@@ -30,5 +31,18 @@
   console.log(person);
   console.log(health);
   mergeObj();
+*/
+
+  function info(fname,lname, age){
+    this.fname = fname;
+    this.lname = lname;
+    this.age = age;
+    this.checkAdult = () => {return this.age >=18};
+
+  }
+
+  const createInfo = new info("Gosho", "Goshov", 22);
+  console.log(createInfo.checkAdult());
+  display(createInfo);
 
 })();
