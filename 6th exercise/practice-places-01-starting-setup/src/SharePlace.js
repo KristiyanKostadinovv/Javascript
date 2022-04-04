@@ -1,6 +1,10 @@
-import { Modal } from './UI/Modal';
+/*import { Modal } from './UI/Modal';
 import { Map } from './UI/Map';
-import { getCoordsFromAddress, getAddressFromCoords } from './Utility/Location';
+import { getCoordsFromAddress, getAddressFromCoords } from './Utility/Location';*/
+
+const {Modal}  = require("./UI/Modal");
+const {Map} = require("./UI/Map");
+const {getCoordsFromAddress, getAddressFromCoords} = require("./Utility/Location");
 
 class PlaceFinder {
   constructor() {

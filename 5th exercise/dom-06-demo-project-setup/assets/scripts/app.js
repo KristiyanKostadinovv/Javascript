@@ -6,7 +6,6 @@ const addForm = cancelForm.nextElementSibling;
 const userInput = addBtn.querySelectorAll("input");
 const entryText = document.getElementById("entry-text");
 
-
 const movies = [];
 
 function updateUI() {
