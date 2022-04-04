@@ -13,8 +13,6 @@
         alert(this.age + "not an adult \n");
       }
     }
-
-
   };
 
   const health = {
