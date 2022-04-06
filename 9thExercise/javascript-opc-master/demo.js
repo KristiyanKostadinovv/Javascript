@@ -76,11 +76,16 @@ class Person {
       this.lname = part[1];
     }
 
+    checkAge(){
+        return this.age >=18;
+    }
 }
 
+
 const p1 = new Person("Kris", "Kostadinov", 22);
-p1.setfullName = "Mitko Berbatov"
-display(p1.getfullName);
+p1.setfullName = "Mitko Berbatov";
+display(p1.checkAge());
+
 /*
 const p1 = new Person("Kris", "Kostadinov", 22);
 display();
