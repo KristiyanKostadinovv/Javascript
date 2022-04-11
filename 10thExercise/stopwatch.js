@@ -5,7 +5,6 @@ class StopWatch {
     isRunning = false;
     duration = 0;
 
-
     start() {
         if (this.isRunning) {
             throw new Error("Timer already started");
@@ -45,5 +44,3 @@ setTimeout(function (){
     timer.stop();
     timer.durationn();
 }, 3000);
-
-
