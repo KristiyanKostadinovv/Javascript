@@ -8,8 +8,6 @@ function createCircle(radius) {
     }
 }
 
-const circle = createCircle(1);
-
 //constructor func
 function Circle (radius){
     this.radius = radius;
@@ -18,7 +16,11 @@ function Circle (radius){
     }
 }
 
-const anotherCircle = new Circle(2);
-anotherCircle.draw();
-circle.draw();
+const circle = new Circle(2);
+
+for (let key in circle)
+{
+    if(typeof circle[key] != "function")
+    console.log(key, circle[key]);
+}
 
