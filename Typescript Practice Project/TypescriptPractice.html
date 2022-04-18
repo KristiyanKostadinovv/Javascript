@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>ProjectManager</title>
+    <title>Typescript Practice</title>
     <link rel="stylesheet" href="TypescriptPractice.css" />
     <script src="TypescriptPractice.js" defer></script>
 </head>
@@ -13,11 +13,11 @@
     <form>
         <div class="form-control">
             <label for="title">Title</label>
-            <input type="text" id="title" />
+            <input type="text" id="title" minlength="0" maxlength="25" />
         </div>
         <div class="form-control">
             <label for="description">Description</label>
-            <textarea id="description" rows="3"></textarea>
+            <textarea id="description" rows="3" minlength="0" maxlength="255"></textarea>
         </div>
         <div class="form-control">
             <label for="people">People</label>
