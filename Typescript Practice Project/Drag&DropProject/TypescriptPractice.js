@@ -58,7 +58,7 @@ class ProjectInput {
         this.clearInput();
     }
     configure() {
-        this.formElement.addEventListener("submit", this.submitHandler);
+        this.formElement.addEventListener("click", this.submitHandler);
     }
     attach() {
         this.hostElement.insertAdjacentElement("afterbegin", this.formElement);

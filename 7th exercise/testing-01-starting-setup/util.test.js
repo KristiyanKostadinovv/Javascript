@@ -22,7 +22,7 @@ test("Should click around", async () => {
     });
 
     const page = await browser.newPage();
-    await page.goto("http://localhost:63342/Javascript/7th exercise/testing-01-starting-setup/TypescriptPractice.html?_ijt=rgsmeqrdh0v4q383ac04bn2ehf")
+    await page.goto("http://localhost:63342/Javascript/7th exercise/testing-01-starting-setup/TypescriptPractice.html?_ijt=e5a9hqe45sheqv5t2i2iklvkba")
     await page.click("input#name" );
     await page.type("input#name", "Kris");
     await page.click("input#age");

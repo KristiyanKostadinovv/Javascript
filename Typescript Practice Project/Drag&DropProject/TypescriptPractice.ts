@@ -64,12 +64,13 @@ class ProjectInput {
     }
 
     private configure() {
-        this.formElement.addEventListener("submit", this.submitHandler);
+        this.formElement.addEventListener("click", this.submitHandler);
     }
 
     private attach() {
         this.hostElement.insertAdjacentElement("afterbegin", this.formElement);
     }
 }
+
 
 const projectInput = new ProjectInput();
