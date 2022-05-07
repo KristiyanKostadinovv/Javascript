@@ -5,6 +5,7 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "bootstrap": "^3.4.1",
     "puppeteer": "^13.5.2"
   }
 }
